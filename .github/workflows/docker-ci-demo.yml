@@ -2,10 +2,10 @@
 name: Push Docker Image to Docker Hub # workflow 이름 지정
 on: # 동작 조건 지정
   push: # branch, tags가 push되면 동작하도록
-  branches:
-    - 'master' # **(all branch), - master 만 사용
-  tags:
-    - '**'
+    branches:
+      - 'master' # **(all branch), - master 만 사용
+    tags:
+      - '**'
 jobs: # 작업 지정
   push: # 작업 이름
     runs-on: ubuntu-latest # 빌드에 사용할 ubuntu:latest 머신 시작
