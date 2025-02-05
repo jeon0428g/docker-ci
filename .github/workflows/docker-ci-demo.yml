@@ -28,8 +28,8 @@ jobs: # 작업 지정
       - name: Login to Docker Hub # docker hub login 관련 동작
         uses: docker/login-action@v2 # 사용할 동작
         with: # 동작에 사용할 input 값 사용 선언
-        username: ${{ secrets.DOCKER_HUB_USERNAME }} # docker hub에 사용할 사용자ID secret
-        password: ${{ secrets.DOCKER_HUB_PASSWORD }} # docker hub에 사용할 사용자 암호 secret
+          username: ${{ secrets.DOCKER_HUB_USERNAME }} # docker hub에 사용할 사용자ID secret
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }} # docker hub에 사용할 사용자 암호 secret
       - name: Build and push Docker Image
         uses: docker/build-push-action@v4
         with:
