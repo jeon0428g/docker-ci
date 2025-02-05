@@ -8,7 +8,6 @@ app.use(express.static('public'));
 // Serve the "images" directory as a static folder
 app.use('/images', express.static('public/images'));
 
-
 // Route for the homepage
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
